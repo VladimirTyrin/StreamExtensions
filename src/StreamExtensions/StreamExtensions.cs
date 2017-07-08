@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
@@ -81,6 +82,7 @@ namespace StreamExtensions
             }
         }
 
+        [SuppressMessage("ReSharper", "UnusedParameter.Local")]
         private static void CheckParams(this Stream stream, byte[] buffer, int offset, int count)
         {
             if (stream == null)
